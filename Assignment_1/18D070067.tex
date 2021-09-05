@@ -1,0 +1,204 @@
+\documentclass[12pt]{article}
+
+\title{Assignment 4: DS 203, Fall 2021}
+\author{\textbf{Vinit Awale} \\
+        \textbf{18D070067}}
+\date{}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\maketitle
+
+\section*{Question 1}
+Download, read, and display the data at the following URLs in in python using Google CoLab and pandas, and print the type of each variable. Comment on the difference between python data types (float, int, object, etc.) and the data types taught in class (categorical/nominal, ordinal, numerical (integer, quantized,continuous) etc.)
+\subsection*{Answer}
+\subsubsection*{Dataset 1}
+\begin{center}
+    \begin{tabular}{ |c|c|c|c| } 
+    \hline
+    Varaible & Python Datatype & Kind of data \\
+    \hline
+    District                                        & object & Nominal\\
+    Facility Type                                   & object & Nominal\\
+    Total No. of Facilities #                       & int64  & Numerical (Quantized) \\
+    No. of facilities reporting nil performance *   & int64  & Numerical (Quantized) \\
+    Performance - Overall Average **                & int64  & Numerical (Quantized) \\
+    Performance - Maximum                           &  int64 & Numerical (Quantized) \\
+    Performance - Minimum                           &  int64 & Numerical (Quantized) \\
+    No. of facilities by performance - 1 to 30      &  int64 & Numerical (Quantized) \\
+    No. of facilities by performance - 31 to 150    &  int64 & Numerical (Quantized) \\
+    No. of facilities by performance - 151 to 300   &  int64 & Numerical (Quantized)\\
+    No. of facilities by performance \geq 300       &  int64 & Numerical (Quantized) \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection*{Dataset 2}
+
+
+
+
+
+\section*{Question 2:}\\
+Assume that you are analyzing work travel habits of people from various localities of Mumbai. Classify the
+following into types of analyses into exploratory, descriptive, predictive, or prescriptive: 
+\vspace*{0.5cm}\
+\textbf{Answer:} 
+\begin{itemize}
+    \item a. Finding whether people from Bandra and Powai have different distance traveled distributions
+    \textbf{Answer:} Descriptive Analysis
+    \item b. Analyzing net savings in carbon footprint if a new train station is added to Bandra versus Powai\\
+    \textbf{Answer:} Predictive Analysis
+    \item c. Modeling distance traveled as a function of income, job type, and residence locality\\
+    \textbf{Answer:} Predictive Analysis
+    \item d. Finding ranges of distance traveled variable in the data\\ 
+    \textbf{Answer:} Exploratory Analysis
+    \item e. Finding the number of samples that have distance traveled variable missing in the data \\
+    \textbf{Answer:} Exploratory Analysis
+    \item f. Finding whether the distribution of distance traveled by commuters is Gaussian or beta \\
+    \textbf{Answer:} Descriptive Analysis
+    \item g. Plotting histograms of number of people by residence locality variable in your data \\
+    \textbf{Answer:} Exploratory Analysis
+\end{itemize}
+
+\section*{Question 3:}\\
+For each of the following scenarios, search for datasets related to the problem domain (even if the data is not pertaining to the exact situation) for a few minutes to get a sense of what data is collected around the world. Then exercise your imagination to write down reasonable exploratory, descriptive, predictive, and prescriptive data analyses to be done in case of each of the following hypothetical scenarios. Indicate sources of a few other data sets that you find related to each theme. Feel free to indicate if some of these categories of analyses do not apply to a particular scenario. Some loosely related links are provided: 
+\subsection*{Scenario 1:}\\
+    \item As an advisor to a state government, you want to close the gap between the neonatal mortality in the biggest city versus rest of the state, but you have limited resources to work on only a few hospitals.\\
+    \subsection*{Answer:}\\
+    \subsubsection*{Exploratory analysis}\\
+
+    \begin{itemize}
+        \item What data do we have on neonatal mortality in the biggest city and other cities?
+        \item Is the data biased towards urban or rural areas?
+        \item Is the data from a single hospital or from multiple hospitals?
+        \item Is the data biased towards the richer or poorer class?
+        \item Plotting histograms of neonatal mortality by number of days of the child's survival.
+        \item Plotting histograms of neonatal mortality for various cities.    
+    \end{itemize}
+
+    \subsubsection*{Descriptive analysis}\\
+    \begin{itemize}
+        \item What is the mean neonatal mortality in the biggest city?
+        \item What is the mean neonatal mortality in the other cities?
+        \item Is it true that the neonatal mortality in the biggest city is lower than the rest of the state?
+        \item What is the range of days when the child's life is at the greatest risk?
+    \end{itemize}
+
+    \subsubsection*{Predictive analysis}\\
+    \begin{itemize}
+        \item What will the neonatal mortality in a city be if a new hospital is added?
+        \item Will the neonatal mortality become lower if the hospital is upgraded?
+        \item Will the rate of neonatal mortality decrease if better family planning measures are adopted?
+        \item Does a decrease in population size affect neonatal mortality?
+    \end{itemize}
+
+    \subsubsection*{Prescriptive analysis}\\
+    \begin{itemize}
+        \item What are the best practices for adding a new hospital?
+        \item What measures should be taken by hospital to reduce neonatal mortality?
+        \item Should the hospital be upgraded?
+        \item Should better family planning measures be adopted?
+    \end{itemize}
+
+    \subsubsection*{Datasets}\\
+    \begin{itemize}
+        \item The World Bank data on neonatal mortality for India.\\
+        \url{https://data.worldbank.org/indicator/SH.DYN.NMRT?end=2019&locations=IN&start=1969}
+        \item UNICEF data on neonatal mortality for India.\\
+        \url{https://data.unicef.org/topic/child-survival/neonatal-mortality/ }
+        \item Determinants of neonatal mortality in rural India by NIH.\\
+        \url{https://pubmed.ncbi.nlm.nih.gov/23734339/}\\
+    \end{itemize}    
+
+    \subsection*{Scenario 2:}\\
+    As an analyst for a stock market newsletter, you want to recommend bell-weather stocks for different sectors\\
+    \textbf{Answer:}
+    \subsubsection*{Exploratory analysis}\\
+    \begin{itemize}
+        \item What data do we have on the stock market?
+        \item Is the data from a single stock exchange or from multiple stock exchanges?
+        \item Is the data biased towards certain sectors?
+        \item Do we have data on the stock market for the last few years?
+    \end{itemize}
+
+    \subsubsection*{Descriptive analysis}\\
+    \begin{itemize}
+        \item Does the price of stock have any relationship with it being ballwether or not?
+        \item What is the mean stock price for a sector in the stock market?
+        \item Is it true that Alphabet (GOOGL), the parent company of Google, is a bellwether stock of the technology sector?
+        \item Is it true that FedEx's (FDX) strong revenues and earnings suggest strong consumer and business shipping activity?
+        \item Does each sector have a bellwether stock?
+    \end{itemize}
+
+    \subsubsection*{Predictive analysis}\\
+    \begin{itemize}
+        \item Which stocks in a sector show a strong correlation with the stock market of the particular sector? Can these stocks be recommended as the ballwether stocks?
+        \item Which stocks will grow if the ballwether stocks (predicted in previous parts) grows?
+        \item Does the stock market of a particular sector have a bellwether stock? 
+        \item What will the stock price of Alphabet (GOOGL) be if the company is acquired by a different owner?
+    \end{itemize}
+    
+    \subsubsection*{Prescriptive analysis}\\
+    \begin{itemize}
+        \item What stocks should be bought in a particular sector if the predicted ballwether stocks grows?
+        \item What are the best stock which act as an indicator for the behaviour of the ballwether stocks?
+        \item What are the best stocks to buy in a particular sector?
+    \end{itemize}
+    
+    \subsubsection*{Datasets}\\
+    \begin{itemize}
+        \item NIFTY-50 Stock Market Data (2000 - 2021)\\
+        \url{https://www.kaggle.com/rohanrao/nifty50-stock-market-data}
+        \item S&P 500 Companies with Financial Information\\
+        \url{https://datahub.io/core/s-and-p-500-companies}
+        \item Daily News for Stock Market Prediction\\
+        \url{https://www.kaggle.com/aaron7sun/stocknews}
+    \end{itemize}
+
+    \subsection*{Scenario 3:}\\
+    As an intern at the Ministry of Environment, you are under pressure to approve one of the two roads that have been proposed, and you want to recommend the lesser of the two evils.\\
+    \textbf{Answer:}
+    \subsubsection*{Exploratory analysis}\\
+    \begin{itemize}
+        \item What data do we have on the road network?
+        \item Is the data biased towards a certain road?
+        \item Is the data from a single construction company or from multiple construction companies?
+    \end{itemize}
+
+    \subsubsection*{Descriptive analysis}\\
+    \begin{itemize}
+        \item What is the mean length of the roads?
+        \item Is the construction cost of any one road much lower than the other?
+        \item Are both the roads of the same type and in similar locations?
+    \end{itemize}
+    
+    \subsubsection*{Predictive analysis}\\
+    \begin{itemize}
+        \item Which road is the least expensive?
+        \item Which road will improve the connectivity of the area the most?
+        \item Which of the two roads is the most environment friendly?
+        \item What is the mean length of the roads if the road is built by a different construction company?
+    \end{itemize}
+
+    \subsubsection*{Prescriptive analysis}\\
+    \begin{itemize}
+        \item Which road should be built considering the environmental impact and the construction cost?
+    \end{itemize}
+
+    \subsubsection*{Datasets}\\
+    \begin{itemize}
+        \item Global patterns of current and future road infrastructure\\
+        \url{https://iopscience.iop.org/article/10.1088/1748-9326/aabd42}
+    \end{itemize}
+\end{document}
