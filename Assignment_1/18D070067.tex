@@ -23,6 +23,7 @@
 Download, read, and display the data at the following URLs in in python using Google CoLab and pandas, and print the type of each variable. Comment on the difference between python data types (float, int, object, etc.) and the data types taught in class (categorical/nominal, ordinal, numerical (integer, quantized,continuous) etc.)
 \subsection*{Answer}
 \subsubsection*{Dataset 1}
+There are 11 columns (features) and 74 rows (observations) in the dataset.
 \begin{center}
     \begin{tabular}{ |c|c|c| } 
     \hline
@@ -44,11 +45,23 @@ Download, read, and display the data at the following URLs in in python using Go
 \end{center}
 
 \subsubsection*{Dataset 2}
+There are 7 columns (features) and 252 rows (observations) in the dataset.
 \begin{center}
     \begin{tabular}{ |c|c|c|}
     \hline
     Variable & Python Datatype & Kind of data \\
     \hline
+    Date         & object & Temporal\\
+    Open        & float64 & Numerical (Continuous)\\
+    High        & float64 & Numerical (Continuous)\\
+    Low         & float64 & Numerical (Continuous)\\
+    Close       & float64 & Numerical (Continuous)\\
+    Adj Close   & float64 & Numerical (Continuous)\\
+    Volume      &   int64 & Numerical (Quantized) \\
+    \hline
+    \end{tabular}
+\end{center}
+
 
 
 
